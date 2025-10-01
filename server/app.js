@@ -11,11 +11,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended : false }));
 
 
-
-app.get('/getAll', (req, res) => {
-  console.log('test');
-  res.send('server is working 🚀');
-});
+// read
+app.get('/getAll', (request, response) => {
+    console.log('test')
+    response.send('server is working 🚀');
+})
 
 
 app.listen(process.env.PORT, () => console.log(`app is running on port ${process.env.PORT}`));
